@@ -10,6 +10,8 @@
   font-size: 16px;
   font-family: outfit;
   color: hsl(30, 10%, 34%);
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -29,7 +31,54 @@ h3 {
 table {
   width: 100%;
 }
+table tr td {
+  border-left: none;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+  padding-left: 10%;
+}
+
+ol,
+ul {
+  list-style-position: inside;
+}
+
+.ingredients-list,
+.instructions-list {
+  text-indent: -20px;
+  margin-left: 5px;
+}
+
+ol li::marker,
+ul li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
 
 .amount b {
   color: hsl(14, 45%, 36%);
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (min-width: 375px) {
+  img {
+    width: 100%;
+  }
+  .content {
+    margin: 40px 35px;
+  }
+  .content h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 25px;
+  }
+  .content .main-info {
+    margin-bottom: 60px;
+  }
+  .content .sub-content {
+    padding: 0 25px;
+    margin-bottom: 60px;
+    height: 260px;
+  }
+  .content h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -29,6 +29,8 @@ $desktop-width: 1440px;
   font-size: $root-font_size;
   font-family: outfit;
   color: $wenge-brown;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -47,8 +49,63 @@ h3 {
 
 table {
   width: 100%;
+
+  tr {
+    td {
+      border-left: none;
+      border-bottom: 1px solid $light-grey;
+      padding-left: 10%;
+    }
+  }
+}
+
+ol,
+ul {
+  list-style-position: inside;
+}
+
+.ingredients-list,
+.instructions-list {
+  text-indent: -20px;
+  margin-left: 5px;
+}
+
+ol li::marker,
+ul li::marker {
+  color: $nutmeg;
+  font-weight: bold;
 }
 
 .amount b {
   color: $nutmeg;
+}
+
+@media (min-width: 375px) {
+  img {
+    width: 100%;
+  }
+
+  .content {
+    margin: 40px 35px;
+
+    h1 {
+      font-size: 2rem;
+      line-height: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .main-info {
+      margin-bottom: 60px;
+    }
+
+    .sub-content {
+      padding: 0 25px;
+      margin-bottom: 60px;
+      height: 260px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }
