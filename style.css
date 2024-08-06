@@ -125,7 +125,7 @@ table tr:last-child td {
     width: 100%;
   }
   .container .content {
-    margin: 40px 30px;
+    padding: 40px 30px;
   }
   .container .content h1 {
     font-size: 2rem;
@@ -192,12 +192,11 @@ table tr:last-child td {
 @media (min-width: 1440px) {
   .container {
     width: 740px;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 40px;
     border-radius: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    margin: 120px auto;
   }
   .container img {
     width: 100%;
