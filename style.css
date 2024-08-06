@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: outfit;
   src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
@@ -12,6 +13,15 @@
   color: hsl(30, 10%, 34%);
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
 }
 
 h1 {
@@ -28,69 +38,231 @@ h3 {
   color: hsl(332, 51%, 32%);
 }
 
+hr {
+  border-top: 1px solid hsl(30, 18%, 87%);
+}
+
+.sub-content {
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 15px;
+}
+.sub-content .sub-content-list {
+  list-style: none;
+}
+.sub-content .sub-content-list li {
+  display: flex;
+  align-items: center;
+}
+.sub-content .sub-content-list li::before {
+  content: "⏺";
+  font-size: 0.6rem;
+  color: hsl(332, 51%, 32%);
+}
+
+.ingredients-list {
+  list-style: none;
+}
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+}
+.ingredients-list li::before {
+  content: "⏺";
+  font-size: 0.6rem;
+  color: hsl(14, 45%, 36%);
+}
+
+.instructions-list {
+  list-style: none;
+}
+.instructions-list li:nth-child(1)::before {
+  content: "1.";
+}
+.instructions-list li:nth-child(2)::before {
+  content: "2.";
+}
+.instructions-list li:nth-child(3)::before {
+  content: "3.";
+}
+.instructions-list li:nth-child(4)::before {
+  content: "4.";
+}
+.instructions-list li:nth-child(5)::before {
+  content: "5.";
+}
+.instructions-list li:nth-child(6)::before {
+  content: "6.";
+}
+.instructions-list li::before {
+  color: hsl(14, 45%, 36%);
+  font-weight: 600;
+}
+.instructions-list li {
+  display: flex;
+}
+
 table {
   width: 100%;
 }
 table tr td {
   border-left: none;
   border-bottom: 1px solid hsl(30, 18%, 87%);
-  padding-left: 10%;
 }
-
-ol,
-ul {
-  list-style-position: inside;
-}
-
-.ingredients-list,
-.instructions-list {
-  text-indent: -20px;
-  margin-left: 5px;
-}
-
-ol li::marker,
-ul li::marker {
-  color: hsl(14, 45%, 36%);
-  font-weight: bold;
+table tr:last-child td {
+  border: none;
 }
 
 .amount b {
   color: hsl(14, 45%, 36%);
 }
 
-@media (min-width: 375px) {
-  img {
+@media (min-width: 375px) and (max-width: 1439px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .container img {
     width: 100%;
   }
-  .content {
+  .container .content {
     margin: 40px 30px;
   }
-  .content h1 {
+  .container .content h1 {
     font-size: 2rem;
     line-height: 2rem;
+  }
+  .container .content h2 {
+    font-size: 1.7rem;
     margin-bottom: 25px;
   }
-  .content .main-info {
-    margin-bottom: 60px;
+  .container .content hr {
+    margin: 30px 0 35px 0;
   }
-  .content .sub-content {
-    padding: 25px;
-    margin-bottom: 60px;
+  .container .content .main-info {
+    margin: 30px 0;
+  }
+  .container .content .sub-content {
     height: 195px;
-    background-color: hsl(330, 100%, 98%);
-    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 35px;
   }
-  .content .sub-content h3 {
-    margin-bottom: 15px;
+  .container .content .sub-content h3 {
     font-size: 1.2rem;
-    font-weight: 600;
   }
-  .content .sub-content .sub-content-list {
-    padding: 5px;
-    text-indent: -20px;
-    margin-left: 20px;
+  .container .content .sub-content .sub-content-list li div {
+    margin-top: 15px;
+    padding-left: 25px;
   }
-  .content h2 {
-    font-size: 1.5rem;
+  .container .content .sub-content .sub-content-list li::before {
+    margin-top: 14px;
+    margin-left: 8px;
   }
-}/*# sourceMappingURL=style.css.map */
+  .container .content .ingredients-list {
+    margin-left: 7px;
+  }
+  .container .content .ingredients-list li {
+    margin-bottom: 10px;
+  }
+  .container .content .ingredients-list li div {
+    margin-left: 25px;
+  }
+  .container .content .instructions-list {
+    margin-left: 7px;
+  }
+  .container .content .instructions-list li {
+    margin-bottom: 10px;
+  }
+  .container .content .instructions-list li div {
+    margin-left: 15px;
+    margin-right: 8px;
+  }
+  .container .content .nutrition-info {
+    letter-spacing: 0.1px;
+  }
+  .container .content table {
+    margin-top: 25px;
+  }
+  .container .content table tr {
+    height: 45px;
+  }
+  .container .content table tr td {
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 740px;
+    padding: 40px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  .container img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+  .container .content h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+  .container .content p.main-info {
+    margin: 20px 0 30px 0;
+    line-height: 1.3rem;
+  }
+  .container .content hr {
+    margin: 35px 0;
+  }
+  .container .content .sub-content {
+    margin-bottom: 30px;
+    height: 175px;
+    padding: 25px;
+  }
+  .container .content .sub-content h3 {
+    font-size: 1.3rem;
+  }
+  .container .content .sub-content ul.sub-content-list {
+    margin-left: 8px;
+  }
+  .container .content .sub-content ul.sub-content-list li {
+    margin-top: 12px;
+  }
+  .container .content .sub-content ul.sub-content-list li div {
+    margin-left: 25px;
+  }
+  .container .content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  .container .content .ingredients-list {
+    margin-left: 7px;
+  }
+  .container .content .ingredients-list li {
+    margin-bottom: 10px;
+  }
+  .container .content .ingredients-list li div {
+    margin-left: 25px;
+  }
+  .container .content .instructions-list {
+    margin-left: 7px;
+  }
+  .container .content .instructions-list li {
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.1px;
+  }
+  .container .content .instructions-list li div {
+    margin-left: 15px;
+  }
+  .container .content table {
+    margin-top: 15px;
+  }
+  .container .content table tr {
+    height: 45px;
+  }
+  .container .content table tr td {
+    padding-left: 30px;
+  }
+}
