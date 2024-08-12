@@ -37,7 +37,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ### Links
 
 - Solution URL: [Recipe Page with Sass](https://www.frontendmentor.io/solutions/sass-recipe-page-7OUZZoVwAd)
-- Live Site URL: [Frontend Mentor | Recipe page](https://vangmanawkairung.github.io/Frontend-Mentor_chat-app-css-illustration/)
+- Live Site URL: [Frontend Mentor | Recipe page](https://vangmanawkairung.github.io/Frontend-Mentor_recipe-page/)
 
 ## My process
 
