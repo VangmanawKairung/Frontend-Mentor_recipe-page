@@ -20,7 +20,7 @@ body {
   background-color: hsl(30, 54%, 90%);
 }
 
-.container {
+main {
   background-color: hsl(0, 0%, 100%);
 }
 
@@ -117,80 +117,80 @@ table tr:last-child td {
 }
 
 @media (min-width: 375px) and (max-width: 1439px) {
-  .container {
+  main {
     width: 100%;
     height: 100%;
   }
-  .container img {
+  main img {
     width: 100%;
   }
-  .container .content {
+  main .content {
     padding: 40px 30px;
   }
-  .container .content h1 {
+  main .content h1 {
     font-size: 2rem;
     line-height: 2rem;
   }
-  .container .content h2 {
+  main .content h2 {
     font-size: 1.7rem;
     margin-bottom: 25px;
   }
-  .container .content hr {
+  main .content hr {
     margin: 30px 0 35px 0;
   }
-  .container .content .main-info {
+  main .content .main-info {
     margin: 30px 0;
   }
-  .container .content .sub-content {
+  main .content .sub-content {
     height: 195px;
     padding: 25px;
     margin-bottom: 35px;
   }
-  .container .content .sub-content h3 {
+  main .content .sub-content h3 {
     font-size: 1.2rem;
   }
-  .container .content .sub-content .sub-content-list li div {
+  main .content .sub-content .sub-content-list li div {
     margin-top: 15px;
     padding-left: 25px;
   }
-  .container .content .sub-content .sub-content-list li::before {
+  main .content .sub-content .sub-content-list li::before {
     margin-top: 14px;
     margin-left: 8px;
   }
-  .container .content .ingredients-list {
+  main .content .ingredients-list {
     margin-left: 7px;
   }
-  .container .content .ingredients-list li {
+  main .content .ingredients-list li {
     margin-bottom: 10px;
   }
-  .container .content .ingredients-list li div {
+  main .content .ingredients-list li div {
     margin-left: 25px;
   }
-  .container .content .instructions-list {
+  main .content .instructions-list {
     margin-left: 7px;
   }
-  .container .content .instructions-list li {
+  main .content .instructions-list li {
     margin-bottom: 10px;
   }
-  .container .content .instructions-list li div {
+  main .content .instructions-list li div {
     margin-left: 15px;
     margin-right: 8px;
   }
-  .container .content .nutrition-info {
+  main .content .nutrition-info {
     letter-spacing: 0.1px;
   }
-  .container .content table {
+  main .content table {
     margin-top: 25px;
   }
-  .container .content table tr {
+  main .content table tr {
     height: 45px;
   }
-  .container .content table tr td {
+  main .content table tr td {
     padding-left: 30px;
   }
 }
 @media (min-width: 1440px) {
-  .container {
+  main {
     width: 740px;
     height: -moz-fit-content;
     height: fit-content;
@@ -198,70 +198,70 @@ table tr:last-child td {
     border-radius: 30px;
     margin: 120px auto;
   }
-  .container img {
+  main img {
     width: 100%;
     border-radius: 15px;
     margin-bottom: 40px;
   }
-  .container .content h1 {
+  main .content h1 {
     font-size: 2.5rem;
     line-height: 2rem;
   }
-  .container .content p.main-info {
+  main .content p.main-info {
     margin: 20px 0 30px 0;
     line-height: 1.3rem;
   }
-  .container .content hr {
+  main .content hr {
     margin: 35px 0;
   }
-  .container .content .sub-content {
+  main .content .sub-content {
     margin-bottom: 30px;
     height: 175px;
     padding: 25px;
   }
-  .container .content .sub-content h3 {
+  main .content .sub-content h3 {
     font-size: 1.3rem;
   }
-  .container .content .sub-content ul.sub-content-list {
+  main .content .sub-content ul.sub-content-list {
     margin-left: 8px;
   }
-  .container .content .sub-content ul.sub-content-list li {
+  main .content .sub-content ul.sub-content-list li {
     margin-top: 12px;
   }
-  .container .content .sub-content ul.sub-content-list li div {
+  main .content .sub-content ul.sub-content-list li div {
     margin-left: 25px;
   }
-  .container .content h2 {
+  main .content h2 {
     font-size: 1.8rem;
     margin-bottom: 25px;
   }
-  .container .content .ingredients-list {
+  main .content .ingredients-list {
     margin-left: 7px;
   }
-  .container .content .ingredients-list li {
+  main .content .ingredients-list li {
     margin-bottom: 10px;
   }
-  .container .content .ingredients-list li div {
+  main .content .ingredients-list li div {
     margin-left: 25px;
   }
-  .container .content .instructions-list {
+  main .content .instructions-list {
     margin-left: 7px;
   }
-  .container .content .instructions-list li {
+  main .content .instructions-list li {
     line-height: 1.5rem;
     margin-bottom: 10px;
     letter-spacing: 0.1px;
   }
-  .container .content .instructions-list li div {
+  main .content .instructions-list li div {
     margin-left: 15px;
   }
-  .container .content table {
+  main .content table {
     margin-top: 15px;
   }
-  .container .content table tr {
+  main .content table tr {
     height: 45px;
   }
-  .container .content table tr td {
+  main .content table tr td {
     padding-left: 30px;
   }
 }
