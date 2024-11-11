@@ -1,5 +1,9 @@
 // Font
-$root-font_size: 16px;
+$root-topic-font-family: "Young Serif";
+$root-topic-font-weight: 400;
+$root-article-fomt-family: Outfit;
+$root-article-font-weight: 400;
+$root-font-size: 16px;
 
 // Colors
 $nutmeg: hsl(14, 45%, 36%);
@@ -17,12 +21,29 @@ $dark-charcoal: hsl(24, 5%, 18%);
 }
 
 * {
-  font-size: $root-font_size;
-  font-family: outfit;
-  color: $wenge-brown;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: $wenge-brown;
+  font-family: $root-article-fomt-family;
+  font-size: $root-font-size;
+  font-weight: $root-article-font-weight;
+  line-height: 1.5rem;
+}
+
+h1,
+h2 {
+  font-family: $root-topic-font-family;
+  font-weight: $root-topic-font-weight;
+}
+
+h2 {
+  color: $nutmeg;
+}
+
+h3 {
+  color: $dark-raspberry;
+  font-weight: 700;
 }
 
 ol,
@@ -31,8 +52,17 @@ ul {
   padding-left: 30px;
 
   li {
-    padding-left: 20px;
+    padding-left: 25px;
+    margin-top: 15px;
   }
+}
+
+b {
+  font-weight: 600;
+}
+
+.amount b {
+  color: $nutmeg;
 }
 
 body {
@@ -47,6 +77,31 @@ body {
 
     article.content {
       padding: 40px 30px;
+
+      header.topic {
+        h1 {
+          font-size: 2rem;
+          line-height: 2rem;
+          margin-bottom: 29px;
+        }
+
+        p.main-info {
+          margin-bottom: 35px;
+        }
+      }
+
+      section.sub-content {
+        @include set-size(100%, fit-content);
+
+        padding: 24px 24px 24px 24px;
+        background: $rose-white;
+        border-radius: 10px;
+
+        h3 {
+          font-size: 1.3rem;
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }
