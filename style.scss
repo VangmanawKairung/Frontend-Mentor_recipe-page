@@ -1,3 +1,6 @@
+// Font
+$root-font_size: 16px;
+
 // Colors
 $nutmeg: hsl(14, 45%, 36%);
 $dark-raspberry: hsl(332, 51%, 32%);
@@ -8,21 +11,9 @@ $light-grey: hsl(30, 18%, 87%);
 $wenge-brown: hsl(30, 10%, 34%);
 $dark-charcoal: hsl(24, 5%, 18%);
 
-// Font size at root
-$root-font_size: 16px;
-
-// Device min-width
-$mobile-width: 375px;
-$desktop-width: 1440px;
-
-@font-face {
-  font-family: outfit;
-  src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: young-serif;
-  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+@mixin set-size($w, $h) {
+  width: $w;
+  height: $h;
 }
 
 * {
@@ -34,311 +25,337 @@ $desktop-width: 1440px;
   box-sizing: border-box;
 }
 
+ol,
+ul {
+  list-style-position: outside;
+  padding-left: 30px;
+
+  li {
+    padding-left: 20px;
+  }
+}
+
 body {
-  background-color: $eggshell;
-}
+  @include set-size(100vw, 100vh);
 
-main {
-  background-color: $white;
-}
+  main.container {
+    @include set-size(100%, 100%);
 
-h1 {
-  color: $dark-charcoal;
-  font-family: young-serif;
-}
-
-h2 {
-  font-family: young-serif;
-  color: $nutmeg;
-}
-
-h3 {
-  color: $dark-raspberry;
-}
-
-hr {
-  border-top: 1px solid $light-grey;
-}
-
-.sub-content {
-  background-color: $rose-white;
-  border-radius: 15px;
-
-  .sub-content-list {
-    list-style: none;
-
-    li {
-      display: flex;
-      align-items: center;
+    img.cover-image {
+      @include set-size(100%, fit-content);
     }
 
-    li::before {
-      content: "⏺";
-      font-size: 0.6rem;
-      color: $dark-raspberry;
-    }
-  }
-}
-
-.ingredients-list {
-  list-style: none;
-
-  li {
-    display: flex;
-    align-items: center;
-  }
-
-  li::before {
-    content: "⏺";
-    font-size: 0.6rem;
-    color: $nutmeg;
-  }
-}
-
-.instructions-list {
-  list-style: none;
-
-  li:nth-child(1)::before {
-    content: "1.";
-  }
-  li:nth-child(2)::before {
-    content: "2.";
-  }
-  li:nth-child(3)::before {
-    content: "3.";
-  }
-  li:nth-child(4)::before {
-    content: "4.";
-  }
-  li:nth-child(5)::before {
-    content: "5.";
-  }
-  li:nth-child(6)::before {
-    content: "6.";
-  }
-
-  li::before {
-    color: $nutmeg;
-    font-weight: 600;
-  }
-
-  li {
-    display: flex;
-  }
-}
-
-table {
-  width: 100%;
-
-  tr {
-    td {
-      border-left: none;
-      border-bottom: 1px solid $light-grey;
-    }
-  }
-
-  tr:last-child {
-    td {
-      border: none;
-    }
-  }
-}
-
-.amount b {
-  color: $nutmeg;
-}
-
-@media (min-width: 375px) and (max-width: 1439px) {
-  main {
-    width: 100%;
-    height: 100%;
-
-    img {
-      width: 100%;
-    }
-
-    .content {
+    article.content {
       padding: 40px 30px;
-
-      h1 {
-        font-size: 2rem;
-        line-height: 2rem;
-      }
-
-      h2 {
-        font-size: 1.7rem;
-        margin-bottom: 25px;
-      }
-
-      hr {
-        margin: 30px 0 35px 0;
-      }
-
-      .main-info {
-        margin: 30px 0;
-      }
-
-      .sub-content {
-        height: 195px;
-        padding: 25px;
-        margin-bottom: 35px;
-
-        h3 {
-          font-size: 1.2rem;
-        }
-
-        .sub-content-list {
-          li {
-            div {
-              margin-top: 15px;
-              padding-left: 25px;
-            }
-          }
-
-          li::before {
-            margin-top: 14px;
-            margin-left: 8px;
-          }
-        }
-      }
-
-      .ingredients-list {
-        margin-left: 7px;
-
-        li {
-          margin-bottom: 10px;
-          div {
-            margin-left: 25px;
-          }
-        }
-      }
-
-      .instructions-list {
-        margin-left: 7px;
-
-        li {
-          margin-bottom: 10px;
-
-          div {
-            margin-left: 15px;
-            margin-right: 8px;
-          }
-        }
-      }
-
-      .nutrition-info {
-        letter-spacing: 0.1px;
-      }
-
-      table {
-        margin-top: 25px;
-
-        tr {
-          height: 45px;
-
-          td {
-            padding-left: 30px;
-          }
-        }
-      }
     }
   }
 }
 
-@media (min-width: 1440px) {
-  main {
-    width: 740px;
-    height: fit-content;
-    padding: 40px;
-    border-radius: 30px;
-    margin: 120px auto;
+// body {
+//   background-color: $eggshell;
+// }
 
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // translate: -50% -50%;
+// main {
+//   background-color: $white;
+// }
 
-    img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 40px;
-    }
+// h1 {
+//   color: $dark-charcoal;
+//   font-family: young-serif;
+// }
 
-    .content {
-      h1 {
-        font-size: 2.5rem;
-        line-height: 2rem;
-      }
+// h2 {
+//   font-family: young-serif;
+//   color: $nutmeg;
+// }
 
-      p.main-info {
-        margin: 20px 0 30px 0;
-        line-height: 1.3rem;
-      }
+// h3 {
+//   color: $dark-raspberry;
+// }
 
-      hr {
-        margin: 35px 0;
-      }
+// hr {
+//   border-top: 1px solid $light-grey;
+// }
 
-      .sub-content {
-        margin-bottom: 30px;
-        height: 175px;
-        padding: 25px;
+// .sub-content {
+//   background-color: $rose-white;
+//   border-radius: 15px;
 
-        h3 {
-          font-size: 1.3rem;
-        }
+//   .sub-content-list {
+//     list-style: none;
 
-        ul.sub-content-list {
-          margin-left: 8px;
-          li {
-            margin-top: 12px;
+//     li {
+//       display: flex;
+//       align-items: center;
+//     }
 
-            div {
-              margin-left: 25px;
-            }
-          }
-        }
-      }
+//     li::before {
+//       content: "⏺";
+//       font-size: 0.6rem;
+//       color: $dark-raspberry;
+//     }
+//   }
+// }
 
-      h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
-      }
+// .ingredients-list {
+//   list-style: none;
 
-      .ingredients-list {
-        margin-left: 7px;
+//   li {
+//     display: flex;
+//     align-items: center;
+//   }
 
-        li {
-          margin-bottom: 10px;
-          div {
-            margin-left: 25px;
-          }
-        }
-      }
+//   li::before {
+//     content: "⏺";
+//     font-size: 0.6rem;
+//     color: $nutmeg;
+//   }
+// }
 
-      .instructions-list {
-        margin-left: 7px;
+// .instructions-list {
+//   list-style: none;
 
-        li {
-          line-height: 1.5rem;
-          margin-bottom: 10px;
-          letter-spacing: 0.1px;
+//   li:nth-child(1)::before {
+//     content: "1.";
+//   }
+//   li:nth-child(2)::before {
+//     content: "2.";
+//   }
+//   li:nth-child(3)::before {
+//     content: "3.";
+//   }
+//   li:nth-child(4)::before {
+//     content: "4.";
+//   }
+//   li:nth-child(5)::before {
+//     content: "5.";
+//   }
+//   li:nth-child(6)::before {
+//     content: "6.";
+//   }
 
-          div {
-            margin-left: 15px;
-          }
-        }
-      }
+//   li::before {
+//     color: $nutmeg;
+//     font-weight: 600;
+//   }
 
-      table {
-        margin-top: 15px;
-        tr {
-          height: 45px;
-          td {
-            padding-left: 30px;
-          }
-        }
-      }
-    }
-  }
-}
+//   li {
+//     display: flex;
+//   }
+// }
+
+// table {
+//   width: 100%;
+
+//   tr {
+//     td {
+//       border-left: none;
+//       border-bottom: 1px solid $light-grey;
+//     }
+//   }
+
+//   tr:last-child {
+//     td {
+//       border: none;
+//     }
+//   }
+// }
+
+// .amount b {
+//   color: $nutmeg;
+// }
+
+// @media (min-width: 375px) and (max-width: 1439px) {
+//   main {
+//     width: 100%;
+//     height: 100%;
+
+//     img {
+//       width: 100%;
+//     }
+
+//     .content {
+//       padding: 40px 30px;
+
+//       h1 {
+//         font-size: 2rem;
+//         line-height: 2rem;
+//       }
+
+//       h2 {
+//         font-size: 1.7rem;
+//         margin-bottom: 25px;
+//       }
+
+//       hr {
+//         margin: 30px 0 35px 0;
+//       }
+
+//       .main-info {
+//         margin: 30px 0;
+//       }
+
+//       .sub-content {
+//         height: 195px;
+//         padding: 25px;
+//         margin-bottom: 35px;
+
+//         h3 {
+//           font-size: 1.2rem;
+//         }
+
+//         .sub-content-list {
+//           li {
+//             div {
+//               margin-top: 15px;
+//               padding-left: 25px;
+//             }
+//           }
+
+//           li::before {
+//             margin-top: 14px;
+//             margin-left: 8px;
+//           }
+//         }
+//       }
+
+//       .ingredients-list {
+//         margin-left: 7px;
+
+//         li {
+//           margin-bottom: 10px;
+//           div {
+//             margin-left: 25px;
+//           }
+//         }
+//       }
+
+//       .instructions-list {
+//         margin-left: 7px;
+
+//         li {
+//           margin-bottom: 10px;
+
+//           div {
+//             margin-left: 15px;
+//             margin-right: 8px;
+//           }
+//         }
+//       }
+
+//       .nutrition-info {
+//         letter-spacing: 0.1px;
+//       }
+
+//       table {
+//         margin-top: 25px;
+
+//         tr {
+//           height: 45px;
+
+//           td {
+//             padding-left: 30px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media (min-width: 1440px) {
+//   main {
+//     width: 740px;
+//     height: fit-content;
+//     padding: 40px;
+//     border-radius: 30px;
+//     margin: 120px auto;
+
+//     // position: absolute;
+//     // top: 50%;
+//     // left: 50%;
+//     // translate: -50% -50%;
+
+//     img {
+//       width: 100%;
+//       border-radius: 15px;
+//       margin-bottom: 40px;
+//     }
+
+//     .content {
+//       h1 {
+//         font-size: 2.5rem;
+//         line-height: 2rem;
+//       }
+
+//       p.main-info {
+//         margin: 20px 0 30px 0;
+//         line-height: 1.3rem;
+//       }
+
+//       hr {
+//         margin: 35px 0;
+//       }
+
+//       .sub-content {
+//         margin-bottom: 30px;
+//         height: 175px;
+//         padding: 25px;
+
+//         h3 {
+//           font-size: 1.3rem;
+//         }
+
+//         ul.sub-content-list {
+//           margin-left: 8px;
+//           li {
+//             margin-top: 12px;
+
+//             div {
+//               margin-left: 25px;
+//             }
+//           }
+//         }
+//       }
+
+//       h2 {
+//         font-size: 1.8rem;
+//         margin-bottom: 25px;
+//       }
+
+//       .ingredients-list {
+//         margin-left: 7px;
+
+//         li {
+//           margin-bottom: 10px;
+//           div {
+//             margin-left: 25px;
+//           }
+//         }
+//       }
+
+//       .instructions-list {
+//         margin-left: 7px;
+
+//         li {
+//           line-height: 1.5rem;
+//           margin-bottom: 10px;
+//           letter-spacing: 0.1px;
+
+//           div {
+//             margin-left: 15px;
+//           }
+//         }
+//       }
+
+//       table {
+//         margin-top: 15px;
+//         tr {
+//           height: 45px;
+//           td {
+//             padding-left: 30px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
