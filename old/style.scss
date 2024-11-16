@@ -28,7 +28,7 @@ $dark-charcoal: hsl(24, 5%, 18%);
   font-family: $root-article-fomt-family;
   font-size: $root-font-size;
   font-weight: $root-article-font-weight;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
 }
 
 h1,
@@ -49,16 +49,29 @@ h3 {
 ol,
 ul {
   list-style-position: outside;
-  padding-left: 30px;
+  padding-left: 25px;
 
   li {
-    padding-left: 25px;
+    padding-left: 20px;
     margin-top: 15px;
   }
+
+  li::marker {
+    color: $nutmeg;
+  }
+}
+
+ol li::marker {
+  font-weight: 600;
 }
 
 b {
   font-weight: 600;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid $light-grey;
 }
 
 .amount b {
@@ -67,6 +80,16 @@ b {
 
 body {
   @include set-size(100vw, 100vh);
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 35px;
+  }
 
   main.container {
     @include set-size(100%, 100%);
@@ -96,10 +119,35 @@ body {
         padding: 24px 24px 24px 24px;
         background: $rose-white;
         border-radius: 10px;
+        margin-bottom: 30px;
 
         h3 {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           margin-bottom: 20px;
+        }
+
+        ul li::marker {
+          color: $dark-raspberry;
+        }
+      }
+
+      section.nutrition-blog {
+        table {
+          @include set-size(100%, fit-content);
+
+          margin-top: 30px;
+
+          tr {
+            @include set-size(100%, 45px);
+
+            td {
+              border-bottom: 1px solid $light-grey;
+              padding-left: 35px;
+            }
+          }
+          .last {
+            border: none;
+          }
         }
       }
     }
