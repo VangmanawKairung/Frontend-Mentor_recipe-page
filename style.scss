@@ -1,0 +1,119 @@
+// Font
+$topic-font-family: "Young Serif";
+$prepare-topic-and-paragraph-font-family: Outfit;
+$topic-font-weight: 400;
+$prepare-topic-font-weight: 700;
+$bold-text-font-weight: 600;
+$normal-text-font-weight: 400;
+$root-font-size: 16px;
+
+// Color
+$main-container-background-color: hsl(0, 0%, 100%);
+$body-background-color: hsl(30, 54%, 90%);
+$line-color: hsl(30, 18%, 87%);
+$paragraph-color: hsl(30, 10%, 34%);
+$main-heading-color: hsl(24, 5%, 18%);
+$sub-and-amount-table-heading-color: hsl(14, 45%, 36%);
+$prepare-section-heading-and-bullet-color: hsl(332, 51%, 32%);
+$prepare-section-background-color: hsl(330, 100%, 98%);
+
+h1,
+h2 {
+  font-family: $topic-font-family;
+  font-weight: $topic-font-weight;
+}
+
+h1 {
+  color: $main-heading-color;
+}
+
+h2 {
+  color: $sub-and-amount-table-heading-color;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+}
+
+p,
+ul li,
+ol li,
+tr {
+  font-family: $prepare-topic-and-paragraph-font-family;
+  font-weight: $normal-text-font-weight;
+  color: $paragraph-color;
+}
+
+.prepare-info {
+  background-color: $prepare-section-background-color;
+
+  h3 {
+    color: $prepare-section-heading-and-bullet-color;
+    font-family: $prepare-topic-and-paragraph-font-family;
+  }
+
+  ul li::marker {
+    color: $prepare-section-heading-and-bullet-color;
+  }
+}
+
+b,
+.amount {
+  font-weight: $bold-text-font-weight;
+}
+
+.amount {
+  color: $sub-and-amount-table-heading-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  .info-container {
+    margin: 40px 30px;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    .prepare-info {
+      padding: 25px;
+      padding-right: 50px;
+      width: 310px;
+      height: 195px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin-bottom: 30px;
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      ul {
+        height: 105px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 30px;
+      }
+    }
+  }
+}

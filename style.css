@@ -1,0 +1,91 @@
+h1,
+h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+h1 {
+  color: hsl(24, 5%, 18%);
+}
+
+h2 {
+  color: hsl(14, 45%, 36%);
+}
+
+ul,
+ol {
+  list-style-position: outside;
+}
+
+p,
+ul li,
+ol li,
+tr {
+  font-family: Outfit;
+  font-weight: 400;
+  color: hsl(30, 10%, 34%);
+}
+
+.prepare-info {
+  background-color: hsl(330, 100%, 98%);
+}
+.prepare-info h3 {
+  color: hsl(332, 51%, 32%);
+  font-family: Outfit;
+}
+.prepare-info ul li::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+b,
+.amount {
+  font-weight: 600;
+}
+
+.amount {
+  color: hsl(14, 45%, 36%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100%;
+}
+.main-container img {
+  width: 100%;
+}
+.main-container .info-container {
+  margin: 40px 30px;
+}
+.main-container .info-container h1 {
+  margin-bottom: 20px;
+}
+.main-container .info-container p {
+  margin-bottom: 30px;
+}
+.main-container .info-container .prepare-info {
+  padding: 25px;
+  padding-right: 50px;
+  width: 310px;
+  height: 195px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.main-container .info-container .prepare-info h3 {
+  font-size: 1.2rem;
+}
+.main-container .info-container .prepare-info ul {
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 30px;
+}
