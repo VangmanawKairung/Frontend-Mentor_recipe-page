@@ -34,6 +34,10 @@ h2 {
 ul,
 ol {
   list-style-position: outside;
+
+  li {
+    padding-left: 15px;
+  }
 }
 
 p,
@@ -47,14 +51,18 @@ tr {
 
 .prepare-info {
   background-color: $prepare-section-background-color;
+  padding: 25px;
+  border-radius: 10px;
 
   h3 {
+    font-size: 1.2rem;
     color: $prepare-section-heading-and-bullet-color;
     font-family: $prepare-topic-and-paragraph-font-family;
   }
 
   ul li::marker {
     color: $prepare-section-heading-and-bullet-color;
+    font-weight: $bold-text-font-weight;
   }
 }
 
@@ -67,10 +75,17 @@ b,
   color: $sub-and-amount-table-heading-color;
 }
 
+.ingredients-part ul li::marker,
+.instructions-part ol li::marker {
+  color: $sub-and-amount-table-heading-color;
+  font-weight: $bold-text-font-weight;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.5rem;
 }
 
 .main-container {
@@ -86,6 +101,8 @@ b,
 
     h1 {
       margin-bottom: 20px;
+      line-height: 2.3rem;
+      font-size: 2.3rem;
     }
 
     p {
@@ -93,26 +110,103 @@ b,
     }
 
     .prepare-info {
-      padding: 25px;
-      padding-right: 50px;
-      width: 310px;
-      height: 195px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-radius: 10px;
       margin-bottom: 30px;
 
       h3 {
-        font-size: 1.2rem;
+        margin-bottom: 15px;
       }
 
       ul {
-        height: 105px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         margin-left: 30px;
+
+        li {
+          margin-bottom: 10px;
+        }
+
+        li:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .topic {
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: 1px solid $line-color;
+    }
+
+    .ingredients-part ul,
+    .instructions-part ol {
+      margin-left: 25px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      tr td {
+        border-bottom: 1px solid $line-color;
+        padding: 10px 0;
+      }
+
+      tr:first-child td {
+        padding-top: 0;
+      }
+
+      tr:last-child td {
+        border: none;
+        padding-bottom: 0;
+      }
+
+      tr td:first-child {
+        text-indent: 30px;
+      }
+
+      tr td:last-child {
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: $body-background-color;
+
+    article .main-container {
+      width: 735px;
+      height: 1710px;
+      background-color: white;
+      border-radius: 25px;
+      padding: 40px;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+
+      img {
+        border-radius: 10px;
+      }
+
+      .info-container {
+        margin: 37px 0;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .topic {
+          font-size: 1.75rem;
+          line-height: 1.9rem;
+        }
       }
     }
   }
