@@ -32,17 +32,13 @@ tr {
 
 .prepare-info {
   background-color: hsl(330, 100%, 98%);
-  padding: 25px;
-  border-radius: 10px;
 }
 .prepare-info h3 {
-  font-size: 1.2rem;
   color: hsl(332, 51%, 32%);
   font-family: Outfit;
 }
 .prepare-info ul li::marker {
   color: hsl(332, 51%, 32%);
-  font-weight: 600;
 }
 
 b,
@@ -86,9 +82,12 @@ b,
   margin-bottom: 30px;
 }
 .main-container .info-container .prepare-info {
+  padding: 25px;
+  border-radius: 10px;
   margin-bottom: 30px;
 }
 .main-container .info-container .prepare-info h3 {
+  font-size: 1.2rem;
   margin-bottom: 15px;
 }
 .main-container .info-container .prepare-info ul {
@@ -141,7 +140,7 @@ b,
   body {
     background-color: hsl(30, 54%, 90%);
   }
-  body article .main-container {
+  body .main-container {
     width: 735px;
     height: 1710px;
     background-color: white;
@@ -152,16 +151,16 @@ b,
     left: 50%;
     translate: -50% -50%;
   }
-  body article .main-container img {
+  body .main-container img {
     border-radius: 10px;
   }
-  body article .main-container .info-container {
+  body .main-container .info-container {
     margin: 37px 0;
   }
-  body article .main-container .info-container h1 {
+  body .main-container .info-container h1 {
     font-size: 2.5rem;
   }
-  body article .main-container .info-container .topic {
+  body .main-container .info-container .topic {
     font-size: 1.75rem;
     line-height: 1.9rem;
   }

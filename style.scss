@@ -51,18 +51,14 @@ tr {
 
 .prepare-info {
   background-color: $prepare-section-background-color;
-  padding: 25px;
-  border-radius: 10px;
 
   h3 {
-    font-size: 1.2rem;
     color: $prepare-section-heading-and-bullet-color;
     font-family: $prepare-topic-and-paragraph-font-family;
   }
 
   ul li::marker {
     color: $prepare-section-heading-and-bullet-color;
-    font-weight: $bold-text-font-weight;
   }
 }
 
@@ -110,9 +106,12 @@ b,
     }
 
     .prepare-info {
+      padding: 25px;
+      border-radius: 10px;
       margin-bottom: 30px;
 
       h3 {
+        font-size: 1.2rem;
         margin-bottom: 15px;
       }
 
@@ -180,7 +179,7 @@ b,
   body {
     background-color: $body-background-color;
 
-    article .main-container {
+    .main-container {
       width: 735px;
       height: 1710px;
       background-color: white;
