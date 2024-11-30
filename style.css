@@ -139,6 +139,7 @@ b,
 @media (min-width: 1024px) {
   body {
     background-color: hsl(30, 54%, 90%);
+    padding: 120px;
   }
   body .main-container {
     width: 735px;
@@ -146,10 +147,7 @@ b,
     background-color: white;
     border-radius: 25px;
     padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    margin: 0 auto;
   }
   body .main-container img {
     border-radius: 10px;
