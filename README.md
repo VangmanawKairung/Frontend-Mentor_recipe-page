@@ -33,7 +33,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Recipe Page with Sass](https://www.frontendmentor.io/solutions/sass-recipe-page-7OUZZoVwAd)
+- Solution URL: [Recipe page Responsive Design by HTML5 and Sassy CSS (Sass)](https://www.frontendmentor.io/solutions/recipe-page-responsive-design-by-html5-and-sassy-css-sass-_FFCZSPcl4)
 - Live Site URL: [Frontend Mentor | Recipe page](https://vangmanawkairung.github.io/Frontend-Mentor_recipe-page/)
 
 ## My process
